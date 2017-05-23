@@ -7,7 +7,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/cpus', function (req, res) {
-	res.send(require('os').cpus().length);
+	res.send(require('os').cpus().length.toString());
 });
 
 app.listen(process.env.PORT || 5000);
