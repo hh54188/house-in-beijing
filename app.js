@@ -6,4 +6,8 @@ app.get('/', function(req, res){
 	res.sendFile(path.resolve('./index.html'));
 });
 
+app.get('/cpus', function (req, res) {
+	res.send(require('os').cpus().length);
+});
+
 app.listen(process.env.PORT || 5000);
